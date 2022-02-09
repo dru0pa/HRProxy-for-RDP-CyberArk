@@ -29,4 +29,12 @@ touch /etc/haproxy/haproxy.cfg (add content from haproxy.cfg) or copy haproxy.cf
 
 systemctl restart haproxy && systemctl status haproxy
 
+systemctl status haproxy
+
+If it dose not stay running, run the below
+
 setsebool -P haproxy_connect_any=1
+
+systemctl restart haproxy && systemctl status haproxy
+
+systemctl status haproxy
