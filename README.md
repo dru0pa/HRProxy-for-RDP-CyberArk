@@ -25,4 +25,8 @@ systemctl status haproxy
 
 mv /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg-back
 
-touch /etc/haproxy/haproxy.cfg
+touch /etc/haproxy/haproxy.cfg (add content from haproxy.cfg) or copy haproxy.cfg file to /etc/haproxy/
+
+systemctl restart haproxy && systemctl status haproxy
+
+setsebool -P haproxy_connect_any=1
